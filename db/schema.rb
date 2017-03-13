@@ -10,9 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170313070140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "sales_summaries", force: :cascade do |t|
+    t.integer  "tasters"
+    t.integer  "sales_volume"
+    t.date     "date"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "winery_id"
+    t.index ["winery_id"], name: "index_sales_summaries_on_winery_id", using: :btree
+  end
+
+  create_table "wineries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "sales_summaries", "wineries"
 end

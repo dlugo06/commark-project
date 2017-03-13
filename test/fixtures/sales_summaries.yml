@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tasters: 1
+  sales_volume: 1
+  date: 2017-03-12
+
+two:
+  tasters: 1
+  sales_volume: 1
+  date: 2017-03-12

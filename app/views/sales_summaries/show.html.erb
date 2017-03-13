@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tasters:</strong>
+  <%= @sales_summary.tasters %>
+</p>
+
+<p>
+  <strong>Sales volume:</strong>
+  <%= @sales_summary.sales_volume %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sales_summary.date %>
+</p>
+
+<%= link_to 'Edit', edit_sales_summary_path(@sales_summary) %> |
+<%= link_to 'Back', sales_summaries_path %>
